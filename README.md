@@ -15,7 +15,10 @@ Table of Contents: This will be expanded when the project becomes more complex.
 Technology Used: Python (Web scraping), MySQL (Database). Front-end is TBD, either HTML+CSS+Javascript or Flutter (Dart) depending on how much I want to flesh this out. 
 
 
-Requirements: Python, MySQL, TBD
+Requirements: 
+1. Python 3
+2. Request_HTML Install using - "pip install requests_html" once Python is installed
+MySQL, TBD
 
 
 Installation Instructions:
