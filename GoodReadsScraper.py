@@ -17,4 +17,6 @@ Test_Link = 'https://www.goodreads.com/book/show/186074.The_Name_of_the_Wind'
 
 r = s.get(Test_Link)
 
-print(r.html.find('h1.Text.Text__title1', first=True).text)
+BookName = r.html.find('h1.Text.Text__title1', first=True).text
+BookAuthor = r.html.find('span.ContributorLink__name', first=True).text
+BookRating = r.html.find('div.RatingStatistics__rating', first=True).text
