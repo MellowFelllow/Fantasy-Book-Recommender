@@ -32,6 +32,7 @@ def parse_book(url):
 
     booktuple = tuple(book)
     
-urls = get_book_links(1)
-for url in urls:
-        print(parse_book(url))
+for x in range (1,7):
+     urls = get_book_links(x)
+     for url in urls:
+       print(parse_book(url))
