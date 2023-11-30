@@ -13,3 +13,8 @@ def get_book_links(page):
         links.append(Domain+(item.find('a', first=True).attrs['href']))
     return links 
 
+Test_Link = 'https://www.goodreads.com/book/show/186074.The_Name_of_the_Wind'
+
+r = s.get(Test_Link)
+
+print(r.html.find('h1.Text.Text__title1', first=True).text)
