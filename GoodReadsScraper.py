@@ -20,7 +20,7 @@ def parse_book(url):
     BookName = r.html.find('h1.Text.Text__title1', first=True).text
     BookAuthor = r.html.find('span.ContributorLink__name', first=True).text
     BookRating = r.html.find('div.RatingStatistics__rating', first=True).text
-    BookGenre = r.html.find('ul.CollapsableList', first=True).text
+    BookGenre = r.html.find('ul.CollapsableList', first=True).text.replace('\n','').replace('...more','').replace('Genres','').split()
 
     book = {
         'BookName': BookName,
