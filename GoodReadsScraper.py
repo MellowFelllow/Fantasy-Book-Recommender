@@ -21,15 +21,14 @@ def parse_book(url):
     BookRating = r.html.find('div.RatingStatistics__rating', first=True).text
     BookGenre = r.html.find('ul.CollapsableList', first=True).text.replace('\n','').replace('...more','').replace('Genres','').split()
 
-    book = (
+    book = {
         'BookName': BookName,
         'BookAuthor': BookAuthor,
         'BookRating': BookRating,
         'BookGenre': BookGenre
-        )
-      
-    return book
-
+        }
+    booktuple = tuple(book)
+    return booktuple
 #Pagination - Saving for later
 #urls = get_book_links(1)
 #for url in urls:
