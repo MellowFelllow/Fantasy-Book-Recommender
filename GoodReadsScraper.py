@@ -27,9 +27,11 @@ def parse_book(url):
         'BookRating': BookRating,
         'BookGenre': BookGenre
         }
+
+    return book
+
     booktuple = tuple(book)
-    return booktuple
-#Pagination - Saving for later
-#urls = get_book_links(1)
-#for url in urls:
-#        print(parse_book(url))
+    
+urls = get_book_links(1)
+for url in urls:
+        print(parse_book(url))
